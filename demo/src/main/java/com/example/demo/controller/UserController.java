@@ -55,34 +55,34 @@ public class UserController {
 }
 	
 
-  
-  @GetMapping("/useradd/list") public List<UserAdd> getUsers() { return
-  userRespositary.allUser(); }
-  
-  
-  
-  
-  @GetMapping("/user/list/{id}") public ResponseEntity<?>
-  getBatsmanById(@PathVariable Long id) {
-  
-  UserAdd userAdd=userRespositary.getById(id);
-  
-  
-  
-  if(userAdd!=null) { return new ResponseEntity<>(userAdd,HttpStatus.OK);
-  
-  } else {
-  
-  return new ResponseEntity<>(new
-  ResourceNotfFound("user not Exist id  :"+id),HttpStatus.NOT_FOUND);
-  
-  
-  }
-  
-  }
-  
-  
-  
+/*
+ * @GetMapping("/useradd/list") public List<UserAdd> getUsers() { return
+ * userRespositary.allUser(); }
+ * 
+ * 
+ * 
+ * 
+ * @GetMapping("/user/list/{id}") public ResponseEntity<?>
+ * getBatsmanById(@PathVariable Long id) {
+ * 
+ * UserAdd userAdd=userRespositary.getById(id);
+ * 
+ * 
+ * 
+ * if(userAdd!=null) { return new ResponseEntity<>(userAdd,HttpStatus.OK);
+ * 
+ * } else {
+ * 
+ * return new ResponseEntity<>(new
+ * ResourceNotfFound("user not Exist id  :"+id),HttpStatus.NOT_FOUND);
+ * 
+ * 
+ * }
+ * 
+ * }
+ * 
+ * 
+ */
  
 	
 }

@@ -47,30 +47,29 @@ return 1;
 	
 	}
 	
-
-	
-	  public List<UserAdd> allUser() {
-	  
-	  
-	  return jdbctemplate.query(GET_ALLUSER,BeanPropertyRowMapper.newInstance(UserAdd.class)); 
-	  
-	  }
-	  
-	  
-	  public UserAdd getById(Long id) {
-	  
-	  try { UserAdd useradd=jdbctemplate.queryForObject(GET_USER_BY_ID,
-	  BeanPropertyRowMapper.newInstance(UserAdd.class),id); 
-	  //String asd=
-	  //objectMapper.readValue(useradd.setAddress(useradd.getAddress()),UserAdd);
-	  return useradd;
-	  
-	  }catch (Exception e) { throw new ResourceNotfFound("not found   :"+id); 
-	  
-	  //TODO: handle exception
-	  }
-	  }
-	  
+	/*
+	 * 
+	 * public List<UserAdd> allUser() {
+	 * 
+	 * 
+	 * return
+	 * jdbctemplate.query(GET_ALLUSER,BeanPropertyRowMapper.newInstance(UserAdd.
+	 * class));
+	 * 
+	 * }
+	 * 
+	 * 
+	 * public UserAdd getById(Long id) {
+	 * 
+	 * try { UserAdd useradd=jdbctemplate.queryForObject(GET_USER_BY_ID,
+	 * BeanPropertyRowMapper.newInstance(UserAdd.class),id); //String asd=
+	 * //objectMapper.readValue(useradd.setAddress(useradd.getAddress()),UserAdd);
+	 * return useradd;
+	 * 
+	 * }catch (Exception e) { throw new ResourceNotfFound("not found   :"+id);
+	 * 
+	 * //TODO: handle exception } }
+	 */
 	 
 	
 }
